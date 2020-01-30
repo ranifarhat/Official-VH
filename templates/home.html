@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- My CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/home_p.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/general_css.css') }}">
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+
+    <title>VideoHelper</title>
+	</head>
+	<body>
+		<!-- HEADER OF HOME PAGE -->
+		<div class="container-fluid p-header">
+			<div class="container">
+				<h1>Welcome to VideoHelper</h1>
+				<p id="header-p">A website in which anyone can start learning how to make videos and/or find applications that suit their interests, be it photography, 3d modeling or audio composing!</p>
+			</div>
+		</div>
+
+		<!-- NAVIGATION BAR -->
+		<nav class="navbar navbar-expand-lg font-size-2r navbar-dark bg-custom-d">
+			<!-- WEBSITE NAME -->
+		  <a class="navbar-brand" href="" style="font-size: 2rem;">VideoHelper</a>
+		  <!-- TOGGLE DROP-DOWN-LIST ON SCREEN SIZE -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active"> <!-- FIRST ITEM ON NAV-BAR -->
+		        <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item"> <!-- SECOND ITEM ON NAV-BAR -->
+		        <a class="nav-link" href="{{ url_for('community') }}">Community</a>
+		      </li>
+		      <!-- THIRD ITEM ON NAV-BAR -->
+		      <li class="nav-item bg-custom-d">
+		        <a class="nav-link" href="{{ url_for('signupin') }}">Sign Up/In</a>
+		      </li>
+		      <!-- DROP-DOWN-LIST ITEM -->
+		      <!-- <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Dropdown
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Action</a>
+		          <a class="dropdown-item" href="#">Another action</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="#">Something else here</a>
+		        </div>
+		      </li> -->
+		      <!-- WEBPAGE IN WORK/NOT AVAILABLE -->
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#">Disabled</a>
+		      </li>
+		    </ul>
+		    <!-- SEARCH BAR ON RIGHT OF NAV-BAR -->
+		    <!-- <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    </form> -->
+		    <div class="nav-item my-2 my-lg-0 bg-custom-d color-w">
+		        {{n}}
+		    </div>
+		  </div>
+		</nav>
+
+		<!-- VIDEO BACKGROUND -->
+		<header>
+		  <div class="overlay"></div>
+		  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+		    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+		  </video>
+		  <div class="container h-100">
+		    <div class="d-flex h-100 text-center align-items-center">
+		      <div class="w-100 text-white">
+		        <h1 class="display-3">Video Of The Day</h1>
+		        <!-- <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p> -->
+		      </div>
+		    </div>
+		  </div>
+		</header>
+
+		<!-- SEARCH TO START -->
+		<div class="container-fluid bg-custom-l">
+			<div class="container d-flex h-100 text-center align-items-center">
+		      <div class="w-100 padding-ud-2r">
+				<h1 class="display-3">Search up your interests</h1>
+				<p class="lead mb-0" style="font-size: 1.75rem;">VFX, Audio, Samples, Anything!</p>
+				
+
+				<form class="" method="POST">
+					<input class="group-btn-gen font-size-2r" type="submit" value="Enter">
+					<input class="search-cstm-l margin-ud-2r enter" name="srch" type="text" placeholder="Search..">
+				</form>
+
+				<!-- <button onclick="searchByKeyword()">click me pls</button> -->
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+	</body>
+</html>

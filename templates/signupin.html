@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/general_css.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sui.css') }}">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+    <title>VideoHelper</title>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg font-size-2r navbar-dark bg-custom-d">
+      
+      <!-- WEBSITE NAME -->
+      <a class="navbar-brand" href="#" style="font-size: 2rem;">VideoHelper</a>
+      
+      <!-- TOGGLE DROP-DOWN-LSIT ON SCREEN SIZE -->
+      <button class="navbar-toggler bg-custom-d" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse bg-custom-d" id="navbarSupportedContent">
+
+      <ul class="navbar-nav mr-auto bg-custom-d">
+        
+        <!-- FIRST ITEM ON NAV-BAR -->
+        <li class="nav-item bg-custom-d">
+          <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+
+        <!-- SECOND ITEM ON NAV-BAR -->
+        <li class="nav-item bg-custom-d">
+          <a class="nav-link" href="{{ url_for('community') }}">Community</a>
+        </li>
+
+        <!-- THIRD ITEM ON NAV-BAR -->
+        <li class="nav-item bg-custom-d active">
+          <a class="nav-link" href="{{ url_for('signupin') }}">Sign Up/In <span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- DROP-DOWN-LIST ITEM -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        </li> -->
+
+        <!-- WEBPAGE IN WORK/NOT AVAILABLE -->
+        <li class="nav-item bg-custom-d">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+
+      <!-- SEARCH BAR ON RIGHT OF NAV-BAR -->
+      <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+      </div>
+    </nav>
+    <!-- END OF NAV BAR -->
+
+    <div class="container-fluid">
+      <div class="container">
+
+        <div class="display-3 text-center padding-ud-2r">Join Us</div>
+
+          <div class="reg-box"> 
+            <div class="upin-form">
+              <!-- SIGN IN AND SIGN UP TITLES -->
+              <table class="sui-table">
+                <tr>
+                  <td>
+                    <button class="def-btn text-center align-items- up">
+                      <p class="marg-none">Sign up</p>
+                    </button>
+                  </td>
+                  <td>
+                  <button class="def-btn text-center align-items-center in">
+                    <p class="marg-none">Sign in</p>
+                  </button>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- SIGN UP FORUM -->
+              <form class="signup-forum" action="/signup-in" method="POST">
+                <table class="container text-center font-size-2r">
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="email"><b>Email</b></label>
+                    </td>
+                    <td>
+                      <input type="text" name="email" placeholder="Enter Email" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="name"><b>Username</b></label>
+                      </td>
+                      <td>
+                      <input type="text" name="name" placeholder="Enter username" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="psw"><b>Password</b></label>
+                      </td>
+                      <td>
+                      <input type="password" name="psw" placeholder="Enter Password" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="psw-rep"><b>Confirm Password</b></label>
+                      </td>
+                      <td>
+                      <input type="password" name="psw-rep" placeholder="Repeat Password" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+                </table>
+
+                <input class="font-size-2r group-btn-gen margin-ud-2r" type="submit" value="Submit">
+              </form>
+
+
+
+              <form class="signin-forum" action="/signup-in" method="POST">
+                <table class="container text-center font-size-2r">
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="name"><b>Username</b></label>
+                      </td>
+                      <td>
+                      <input type="text" name="name" placeholder="Enter username" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="padding-ud-2r">
+                      <label for="psw"><b>Password</b></label>
+                      </td>
+                      <td>
+                      <input type="password" name="psw" placeholder="Enter Password" class="under-border-text-sub" required>
+                    </td>
+                  </tr>
+                </table>
+
+                <input class="font-size-2r group-btn-gen margin-ud-2r" type="submit" value="Submit">
+              </form>
+
+
+
+
+
+
+              {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  <ul class=flashes>
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endwith %}
+              {% block body %}{% endblock %}
+
+              
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+  </body>
+</html>
